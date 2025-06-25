@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class HomeWork13Test {
+public class HomeWork13_14Test {
 
     WebDriver driver;
 
@@ -49,9 +49,30 @@ public class HomeWork13Test {
         driver.findElement(By.cssSelector("[href='/gift-cards']"));
 
         driver.findElement(By.cssSelector(".footer"));
+    }
 
+    @Test
+    public void findByXpath () {
 
+        driver.findElement(By.xpath("//h2"));
 
+        driver.findElement(By.xpath("//div[@class='top-menu-triangle']"));
+
+        driver.findElement(By.xpath("//input[@id='small-searchterms']"));
+
+        driver.findElement(By.xpath("//h3[contains(.,'us')]"));
+
+        driver.findElement(By.xpath("//label[starts-with(@for,'po')]"));
+
+        driver.findElement(By.xpath("//ul[@class='top-menu']/.."));
+
+        driver.findElement(By.xpath("//h2/parent::div"));
+
+        driver.findElement(By.xpath("//h2/ancestor::div"));
+
+        driver.findElement(By.xpath("//h3[text()='Information']"));
+
+        driver.findElement(By.xpath("//input[@value='Add to cart']"));
 
     }
 }
