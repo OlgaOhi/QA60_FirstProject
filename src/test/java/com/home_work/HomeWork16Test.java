@@ -35,15 +35,12 @@ public class HomeWork16Test {
     }
 
     @Test
-    public void AddItemToCartTests(Label shoppingCart) {
-        driver.findElement(By.xpath("//div[@class='item-box'][2]//input[@value='Add to cart']")).click();
-        driver.findElement(By.xpath("//input[@value='Shopping cart']")).click();
+    public void AddItemToCartTests() {
+        driver.findElement(By.xpath("(//input[@value='Add to cart'])[2]")).click();
+        driver.findElement(By.cssSelector("#topcartlink")).click();
+        driver.findElement(By.xpath("(//a[@class='product-name'])[1]"));
 
-        String checkText = shoppingCart.getText();
-        if (checkText.contains("14.1-inch Laptop")) {
-            System.out.println("Product added");
-        } else {
-            System.out.println("Product has not been added");
-        }
+
+
     }
 }
