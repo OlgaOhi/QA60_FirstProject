@@ -9,14 +9,10 @@ public class LoginTests_15_HW_Test extends TestBase_15_HW_Test {
     @Test
     public void loginPositiveTest() {
 
-        click(By.cssSelector("[href='/login']"));
-
-        type(By.name("email"), "homework15@gmail.com");
-
-        type(By.name("password"), "Aa12345!");
-
-        click(By.name("login"));
-
+        clickOnLoginLink();
+        fillEmailForm();
+        fillPasswordForm();
+        clickOnLoginButton();
         Assert.assertTrue(newUserAccount(By.xpath("//button[.='Sign Out']")));
     }
 

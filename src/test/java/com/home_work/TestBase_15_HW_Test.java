@@ -21,6 +21,7 @@ public class TestBase_15_HW_Test {
     }
     @AfterMethod
     public void tearDown() {
+
         driver.quit();
     }
     @Test(enabled = false)
@@ -37,6 +38,27 @@ public class TestBase_15_HW_Test {
     }
 
     public void click(By locator) {
+
         driver.findElement(locator).click();
+    }
+
+    public void clickOnLoginButton() {
+         click(By.name("login"));
+     }
+
+    public void fillPasswordForm() {
+        type(By.name("password"), "Aa12345!");
+    }
+
+    public void fillEmailForm() {
+        type(By.name("email"), "homework15@gmail.com");
+    }
+
+    public void clickOnLoginLink() {
+        click(By.cssSelector("[href='/login']"));
+    }
+
+    public void clickOnRegistrationButton() {
+        click(By.name("registration"));
     }
 }
